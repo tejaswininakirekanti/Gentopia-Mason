@@ -54,8 +54,14 @@ class ReadPdfFile(BaseTool):
             Path(file_path)
         )
         try:
-            with read_path.open("r", encoding="utf-8") as f:
-                content = f.read()
+            # with read_path.open("r", encoding="utf-8") as f:
+            #     content = f.read()
+            reader = PdfReader(read_path)
+            for page in range(len(reader.pages)):
+                # creating rotated page object
+                pageObj = reader.pages[page]
+                content+=pageObj.extract_text()
+        
             return content
         except Exception as e:
             return "Error: " + str(e)
@@ -65,6 +71,6 @@ class ReadPdfFile(BaseTool):
 
 
 if __name__ == "__main__":
-    ans = WriteFile()._run("hello_world.text", "hello_world")
+    ans = ReadPdfFile()._run("hello_world.text", "hello_world")
     # ans = ReadFile()._run("hello_world.text")
     print(ans)
