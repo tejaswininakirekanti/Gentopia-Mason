@@ -1,0 +1,7 @@
+Title: A survey on large language model based autonomous agents
+Authors: L Wang, C Ma, X Feng, Z Zhang, H Yang
+Publication Year: 2023
+Venue: arXiv preprint arXiv
+Abstract: Autonomous agents have long been a prominent research topic in the academic community. Previous research in this field often focuses on training agents with limited knowledge within isolated environments, which diverges significantly from the human learning processes, and thus makes the agents hard to achieve human-like decisions. Recently, through the acquisition of vast amounts of web knowledge, large language models (LLMs) have demonstrated remarkable potential in achieving human-level intelligence.
+URL: https://arxiv.org/abs/2308.11432
+Citations: 197
