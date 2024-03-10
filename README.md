@@ -64,4 +64,20 @@ Sometimes an agent can upset you. To wipe it out completely,
 ```
 ./delete_agent <your_agent_name> 
 ```
+## Bonus Question Implementation
+In this bonus part, I created a news agent using google news api, which will access google news in real-time and retrieves articles related to the query.
 
+For this agent, I created a template named news_api_template, which has the configuration under yaml file at `Gentopia-Mason/GentPool/gentpool/pool/news_api_template
+/agent.yaml`
+
+To clone this agent, we need to install gnews module from PyPI using command 
+
+```
+pip install gnews
+```
+I faced issues while installing it, as its dependencies are conflicting with the existing ones. It is raising a warning but it was able to generate results.
+After installing the required package, you can create a new agent using below command
+```
+./clone_agent news_api_template <your_agent_name> 
+```
+Like before, this command created an agent under `./GentPool/gentpool/pool/<your_agent_name>`
